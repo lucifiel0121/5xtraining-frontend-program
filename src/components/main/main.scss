@@ -1,0 +1,20 @@
+.main-container {
+  position: relative;
+  margin-top: 70px;
+}
+
+.scroll-to-top {
+  color: #fff;
+  width: 3.125rem;
+  height: 3.125rem;
+  font-size: 1.875rem;
+  background-color: #d90845;
+  text-align: center;
+  line-height: 3.125rem;
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.25rem;
+  z-index: 2;
+  border-radius: 50%;
+  cursor: pointer;
+}

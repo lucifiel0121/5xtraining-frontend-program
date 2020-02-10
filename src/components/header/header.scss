@@ -1,35 +1,31 @@
 /* header - nav */
 
 header {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
+  background-color: #fff;
   align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
   height: 70px;
   padding: 0 1rem;
-  -webkit-box-shadow: 0 0 0.3125rem #b0a0ad;
   box-shadow: 0 0 0.3125rem #b0a0ad;
 }
 
 .logo-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .logo-link img {
   width: 100%;
+  padding-left: 1rem;
 }
 
 .navbar {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   color: #777;
   font-size: 1rem;
@@ -38,16 +34,61 @@ header {
 }
 
 .navbar__items {
+  line-height: 1.25rem;
   padding: 15px;
+  margin: 0 2px;
   cursor: pointer;
+  & > i {
+    margin: 0 5px;
+  }
+
+  &:hover {
+    color: #d90845;
+  }
 }
 
 .navbar__items_fake-tag {
-  display: inline;
-  background-color: #cd3151;
-  padding: 2px 5px 1px;
-  margin-left: 5px;
-  border-radius: 4px;
-  font-size: 0.85rem;
-  color: white;
+  position: relative;
+
+  &::after {
+    content: '報名優惠中';
+    display: inline-block;
+    background-color: #cd3151;
+    padding: 2px 5px 1px;
+    margin-left: 5px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: white;
+    transition-duration: 5s;
+    animation: wobble-ver-left 1.5s infinite both;
+  }
+}
+
+@keyframes wobble-ver-left {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+    transform-origin: 50% 50%;
+  }
+
+  15% {
+    transform: translateY(-6px) rotate(-1deg);
+  }
+
+  30% {
+    transform: translateY(3.75px) rotate(1deg);
+  }
+
+  45% {
+    transform: translateY(-6px) rotate(-0.8deg);
+  }
+
+  60% {
+    transform: translateY(2px) rotate(0.6deg);
+  }
+
+  75% {
+    transform: translateY(-1px) rotate(-0.3deg);
+  }
 }
