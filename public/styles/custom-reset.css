@@ -1,0 +1,11 @@
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+html,
+body {
+  font-size: 14px;
+  font-family: 微軟正黑體, Arial, Helvetica, sans-serif;
+}

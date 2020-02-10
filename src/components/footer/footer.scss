@@ -1,0 +1,110 @@
+/* footer */
+
+footer {
+  margin: 0 auto;
+  background-color: #f7f7f7;
+  & > .container {
+    display: flex;
+    width: 85vw;
+    margin: 0 auto;
+    padding: 3.125rem 0rem;
+  }
+}
+
+.media-pic {
+  display: flex;
+  flex-direction: column;
+  & img {
+    width: 100%;
+    cursor: pointer;
+  }
+  & img:first-child {
+    margin-bottom: 16px;
+  }
+}
+
+.media-pic_cakeresume {
+  cursor: pointer;
+  & img {
+    max-width: 180px;
+    padding-right: 6px;
+  }
+  & span {
+    font-size: 1.25rem;
+    color: #6c757d;
+  }
+  &:hover span {
+    color: #13ab67;
+  }
+}
+
+.filter-grayscale {
+  filter: grayscale(100%);
+
+  &:hover {
+    filter: grayscale(0%);
+  }
+}
+
+.footer-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 15px;
+}
+
+.footer-bar__nav {
+  display: flex;
+  width: 100%;
+  margin: 0 15px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  & > li {
+    margin: 0.625rem 1.5625rem 0.625rem 0rem;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 0.875rem;
+  }
+}
+
+.footer-bar__contact {
+  display: flex;
+  flex-direction: row;
+}
+.contact-info {
+  padding: 0 15px;
+}
+.contact-info__detail {
+  display: flex;
+  flex-direction: column;
+  & > strong {
+    color: #dc3545;
+    font-size: 150%;
+    font-weight: bold;
+  }
+  & > small {
+    color: #555;
+    font-size: 85%;
+  }
+}
+.contact-info__icon {
+  & > i {
+    border: 0.125rem solid #666;
+    border-radius: 50%;
+    font-size: 1.375rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.5rem;
+    margin-top: 0.625rem;
+    margin-right: 0.625rem;
+  }
+}
+
+.contact-mail {
+  color: #555;
+  & > p {
+    font-size: 1rem;
+    line-height: 2;
+    margin: 0;
+  }
+}
