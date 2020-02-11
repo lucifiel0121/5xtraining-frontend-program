@@ -22,7 +22,7 @@ header {
 
 .logo-link img {
   width: 100%;
-  padding-left: 1rem;
+  padding: 0 1rem;
 }
 
 .navbar {
@@ -34,16 +34,23 @@ header {
 }
 
 .navbar__items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
   line-height: 1.25rem;
-  padding: 15px;
-  margin: 0 2px;
+  padding: 0.825rem;
+  text-align: center;
   cursor: pointer;
   & > i {
     margin: 0 5px;
   }
-
   &:hover {
     color: #d90845;
+  }
+  p {
+    margin: 0;
   }
 }
 
@@ -90,5 +97,92 @@ header {
 
   75% {
     transform: translateY(-1px) rotate(-0.3deg);
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 768px) {
+  header {
+    padding: 0 0;
+  }
+  .nav-toggler {
+    display: flex;
+    position: relative;
+    background-color: #d90845;
+    width: 4.5rem;
+    height: 100%;
+    & > .icon-bar {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      width: 2.5rem;
+      border: 0.1rem solid #fff;
+      border-radius: 0.0625rem;
+    }
+    & > .icon-bar:first-child {
+      top: calc(50% - 0.5rem);
+    }
+    & > .icon-bar:last-child {
+      top: calc(50% + 0.5rem);
+    }
+  }
+  .navbar {
+    & .navbar__items {
+      display: none;
+    }
+  }
+  .navbar-actived {
+    & .navbar__items {
+      display: flex;
+    }
+    & .navbar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      margin-top: 70px;
+      width: 100vw;
+      z-index: 2;
+      background-color: #fff;
+      border: 1px ridge;
+      box-shadow: 0 0.2rem 0.3125rem #e6e6e6;
+    }
+  }
+
+  * .main-container {
+    background-color: yellow;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 991px) and (min-width: 768px) {
+  * .main-container {
+    background-color: red;
+  }
+
+  header {
+    padding: 0 0;
+  }
+  .navbar__items {
+    font-size: 90%;
+    padding: 0.5rem;
+  }
+
+  .nav-toggler {
+    display: none;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  * .main-container {
+    background-color: #777;
+  }
+
+  .nav-toggler {
+    display: none;
   }
 }

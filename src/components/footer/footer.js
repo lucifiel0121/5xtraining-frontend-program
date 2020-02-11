@@ -45,12 +45,16 @@ export default class Footer extends Component {
                 </div>
               </div>
               <div className="contact-mail">
-                <p>有任何問題？</p>
+                <span>有任何問題？</span>
                 <p>hi@5xruby.tw</p>
-                <span>地址： 10046 台北市中正區衡陽路 7 號 5 樓</span>
+                <p>地址： 10046 台北市中正區衡陽路 7 號 5 樓</p>
               </div>
             </div>
           </div>
+        </div>
+        <div className="footer-copyright">
+          <p>© 2014 - 2020 五倍紅寶石股份有限公司 (5XRUBY CO., LTD)</p>
+          <p>台北市短期補習班立案 第 7594 號</p>
         </div>
       </footer>
     );
