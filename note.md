@@ -10,9 +10,10 @@
 
 ## Day2 :
 - 遇到的困難：
-  - rem 單位的掌握不如 px 熟悉 : 寫 CSS RWD 不太一致。 
-  - 沒辦法做到 100% 一樣
-  - [ ] transition 另外寫動畫    
+  - rem 單位的掌握不如 px 熟悉 
+  - 寫 CSS RWD 不太一致 , 排版的 padding 沒有統一（不如 mt-4 , mt-3 這種統一） 
+  - 沒辦法做到 100% 一樣 (排版, 字體顯示 rem/% )
+  - header transition 還需要另外寫動畫    
 - 先來做 RWD (header , footer)
 
 

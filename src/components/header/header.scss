@@ -152,18 +152,10 @@ header {
       box-shadow: 0 0.2rem 0.3125rem #e6e6e6;
     }
   }
-
-  * .main-container {
-    background-color: yellow;
-  }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (max-width: 991px) and (min-width: 768px) {
-  * .main-container {
-    background-color: red;
-  }
-
   header {
     padding: 0 0;
   }
@@ -179,10 +171,6 @@ header {
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-  * .main-container {
-    background-color: #777;
-  }
-
   .nav-toggler {
     display: none;
   }

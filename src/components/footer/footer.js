@@ -26,11 +26,12 @@ export default class Footer extends Component {
               <li>關於五倍紅寶石</li>
               <li>媒體報導</li>
               <li>團隊成員</li>
-              <li>聯絡價格</li>
+              <li>聯絡詢價</li>
               <li>常見問題</li>
               <li>工作機會</li>
               <li>開源專案</li>
               <li>隱私權條款</li>
+              <li>服務條款</li>
             </div>
             <div className="footer-bar__contact">
               <div className="contact-info">
@@ -45,9 +46,12 @@ export default class Footer extends Component {
                 </div>
               </div>
               <div className="contact-mail">
-                <span>有任何問題？</span>
-                <p>hi@5xruby.tw</p>
-                <p>地址： 10046 台北市中正區衡陽路 7 號 5 樓</p>
+                <p>有任何問題？</p>
+                <a herf="mailto:hi@5xruby.tw">hi@5xruby.tw</a>
+
+                <p>
+                  地址： <a href="https://goo.gl/lz5v93">10046 台北市中正區衡陽路 7 號 5 樓</a>
+                </p>
               </div>
             </div>
           </div>
