@@ -1,0 +1,31 @@
+.carousel-img {
+  display: block;
+  position: relative;
+  width: 100vw;
+
+  & img {
+    width: 100vw;
+    height: 100%;
+  }
+}
+
+.carousel-slider {
+  display: flex;
+  position: absolute;
+  width: 100vw;
+  justify-content: center;
+  margin-top: -24px;
+  &__li {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    margin: 0 8px 0 3px;
+    border: 1px solid #fff;
+    background-color: #fff;
+    cursor: pointer;
+
+    &_actived {
+      background-color: red;
+    }
+  }
+}

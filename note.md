@@ -3,8 +3,8 @@
 
 ## Day3 :
 - 遇到的困難：
-  -  
-  - 
+  - 不熟 data-index={index} 的運用
+  - loading 要塞 placeholder
 - Header click status , 看不太理解原本做法，感覺自己 flex 沒摸熟
 
 
