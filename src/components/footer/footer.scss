@@ -146,9 +146,6 @@ footer {
 // No media query for `xs` since this is the default in Bootstrap
 // Small devices (landscape phones, 576px and up)
 @media (max-width: 768px) {
-  * .main-container {
-    background-color: yellow;
-  }
   .container {
     flex-direction: column;
     align-items: center;
