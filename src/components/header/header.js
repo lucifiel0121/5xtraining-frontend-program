@@ -2,10 +2,28 @@ import React, { Component } from 'react';
 import './header.scss';
 
 export default class Header extends Component {
+  /*   constructor(props) {
+    super(props);
+    this.state = {
+      navToggle: false,
+    };
+  }
+ */
+  state = {
+    navToggle: false,
+  };
+
+  handleNavClick = () => {
+    let { navToggle } = this.state;
+    navToggle = !navToggle;
+    this.setState({ navToggle });
+  };
+
   render() {
+    const { navToggle } = this.state;
     return (
       /*  <header className="navbar-actived"> */
-      <header>
+      <header className={navToggle ? 'navbar-actived' : ''}>
         <div className="logo-link">
           <img src={`${process.env.PUBLIC_URL}/assets/images/logo.png`} alt="logo" />
         </div>
@@ -35,7 +53,7 @@ export default class Header extends Component {
             <p>最新消息</p>
           </li>
         </div>
-        <button className="nav-toggler">
+        <button className="nav-toggler" onClick={this.handleNavClick}>
           <i className="icon-bar"></i>
           <i className="icon-bar"></i>
           <i className="icon-bar"></i>

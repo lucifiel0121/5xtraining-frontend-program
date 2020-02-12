@@ -1,5 +1,21 @@
 # note 
 
+
+## Day2 :
+- 遇到的困難：
+  -  
+  - 
+- Header click status , 看不太理解原本做法，感覺自己 flex 沒摸熟
+
+
+## Day2 :
+- 遇到的困難：
+  - rem 單位的掌握不如 px 熟悉 : 寫 CSS RWD 不太一致。 
+  - 沒辦法做到 100% 一樣
+  - [ ] transition 另外寫動畫    
+- 先來做 RWD (header , footer)
+
+
 ## Day1 :
 - 遇到的困難：
   - 本來預期環境不會有問題，
@@ -17,9 +33,3 @@
 
 CRA 的多數 dependencies 都包在 react-script 內，要參考 node_modules > react-script > package.json 才能看到比較細節的 dependencies。
 
-
-## Day2 :
-- 遇到的困難：
-  - rem 單位的掌握不如 px 熟悉 : 寫 CSS RWD 不太一致。 
-  - 
-- 先來做 RWD (header , footer)

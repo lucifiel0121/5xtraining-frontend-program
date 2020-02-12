@@ -136,6 +136,7 @@ header {
   .navbar-actived {
     & .navbar__items {
       display: flex;
+      opacity: 1;
     }
     & .navbar {
       display: flex;
