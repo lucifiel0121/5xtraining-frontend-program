@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './carousel.scss';
+import './test.scss';
 
-export default class Carousel extends Component {
+export default class Test extends Component {
   render() {
     return <div className="testing-container">123</div>;
   }

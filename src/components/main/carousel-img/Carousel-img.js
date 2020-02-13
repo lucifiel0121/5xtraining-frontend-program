@@ -15,7 +15,9 @@ export default class CarouselImg extends Component {
     const { imgsSrc } = this.props;
     return (
       <div className="carousel-img">
-        <img src={imgsSrc[actived]} alt="default" />
+        <picture>
+          <img src={imgsSrc[actived]} alt="banner" />
+        </picture>
 
         <div className="carousel-slider">
           {imgsSrc.map((x, index) => (
@@ -28,7 +30,7 @@ export default class CarouselImg extends Component {
               key={index}
               data-index={index}
               onClick={this.handleIndexClick}
-            ></i>
+            />
           ))}
         </div>
       </div>

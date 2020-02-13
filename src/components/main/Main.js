@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Carousel from '../carousel/Carousel';
-import CarouselImg from '../carousel-img/Carousel-img';
+import Test from './test/Test';
+import CarouselImg from './carousel-img/Carousel-img';
 import './main.scss';
-import FeatureSection from '../feature-section/Feature-section';
+import FeatureSection from './feature-section/Feature-section';
 export default class Main extends Component {
   state = {
     bannerImgs: [
@@ -44,7 +44,7 @@ export default class Main extends Component {
       <div className="main-container">
         <CarouselImg imgsSrc={bannerImgs} />
         <FeatureSection featureDescription={featureLists} />
-        <Carousel />
+        <Test />
         <div className="scroll-to-top">
           <i className="fa fa-angle-up"></i>
         </div>
