@@ -3,14 +3,13 @@ import Carousel from '../carousel/Carousel';
 import CarouselImg from '../carousel-img/Carousel-img';
 import './main.scss';
 import FeatureSection from '../feature-section/Feature-section';
-
 export default class Main extends Component {
   state = {
     bannerImgs: [
-      `${process.env.PUBLIC_URL}/assets/images/banner_5xruby.jpg`,
       `${process.env.PUBLIC_URL}/assets/images/banner_astro.jpg`,
       `${process.env.PUBLIC_URL}/assets/images/banner_imcodingit.jpg`,
       `${process.env.PUBLIC_URL}/assets/images/banner_mokumokukai.jpg`,
+      `${process.env.PUBLIC_URL}/assets/images/banner_5xruby.jpg`,
     ],
     featureLists: [
       {

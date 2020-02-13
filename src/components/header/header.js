@@ -14,9 +14,12 @@ export default class Header extends Component {
   };
 
   handleNavClick = () => {
-    let { navToggle } = this.state;
-    navToggle = !navToggle;
-    this.setState({ navToggle });
+    // Kent C. Dodds :
+    // if you need to reference current states than you can update a function
+    // if you don't than you can just use an object
+    this.setState(currentState => {
+      return { navToggle: !currentState.navToggle };
+    });
   };
 
   render() {
