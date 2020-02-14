@@ -2,9 +2,12 @@
   display: block;
   position: relative;
   width: 100vw;
-
+  picture {
+    display: block;
+    width: 100vw;
+  }
   & img {
-    max-width: 100%;
+    width: 100vw;
     min-height: 100px;
   }
 }
