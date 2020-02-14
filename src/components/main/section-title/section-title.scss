@@ -1,0 +1,18 @@
+.section-title {
+  position: relative;
+  margin: 48px auto;
+  padding-bottom: 24px;
+  font-size: 1.5rem;
+  color: #555;
+  text-align: center;
+  &::after {
+    content: '';
+    bottom: 0;
+    left: calc(50% - 40px);
+    position: absolute;
+    height: 3px;
+    width: 80px;
+    border-radius: 3px;
+    background-color: #d90845;
+  }
+}

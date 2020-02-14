@@ -3,6 +3,7 @@ import Test from './test/Test';
 import CarouselImg from './carousel-img/Carousel-img';
 import './main.scss';
 import FeatureSection from './feature-section/Feature-section';
+import Lecture from './lecture/Lecture';
 export default class Main extends Component {
   state = {
     bannerImgs: [
@@ -44,6 +45,7 @@ export default class Main extends Component {
       <div className="main-container">
         <CarouselImg imgsSrc={bannerImgs} />
         <FeatureSection featureDescription={featureLists} />
+        <Lecture />
         <Test />
         <div className="scroll-to-top">
           <i className="fa fa-angle-up"></i>

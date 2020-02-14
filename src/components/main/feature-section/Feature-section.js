@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import './feature-section.scss';
+import SectionTitle from '../section-title/Section-title';
 export default class FeatureSection extends Component {
   render() {
     const { featureDescription } = this.props;
     return (
       <div className="feature-section">
-        <div className="feature-section__title">
-          <span>關於五倍紅寶石 About 5xRuby</span>
-        </div>
-
+        <SectionTitle title="關於五倍紅寶石 About 5xRuby" />
         <div className="feature-lists">
           {featureDescription.map(({ featureImg, featureTitle, featureContent }, index) => (
             <div className="feature-lists__item" key={index}>
