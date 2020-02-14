@@ -9,7 +9,7 @@ export default class Lecture extends Component {
         <SectionTitle title="熱門網頁設計課程推薦" />
         <div className="lecture-lists">
           {[1, 2, 3].map((x, index) => (
-            <div className="lecture-lists__item">
+            <div className="lecture-lists__item" key={index}>
               <div className="lecture-card">
                 <div className="lecture-card__pic">
                   <img src={`${process.env.PUBLIC_URL}/assets/images/functional.jpg`} alt="" />
