@@ -11,6 +11,30 @@ export default class Recommend extends Component {
       actived: Number(event.target.dataset.index),
     });
   };
+
+  componentDidMount() {
+    const { recommands } = this.props;
+    this.intervalId = setInterval(() => {
+      this.setState(currentState => {
+        return { actived: (currentState.actived + 1) % recommands.length };
+      });
+    }, 5000);
+  }
+  componentWillUnmount() {
+    clearInterval(this.intervalId);
+  }
+  handleMouseEnter = () => {
+    clearInterval(this.intervalId);
+  };
+  handleMouseLeave = () => {
+    const { recommands } = this.props;
+    this.intervalId = setInterval(() => {
+      this.setState(currentState => {
+        return { actived: (currentState.actived + 1) % recommands.length };
+      });
+    }, 5000);
+  };
+
   render() {
     const { actived } = this.state;
     const { recommands, title } = this.props;
@@ -25,6 +49,8 @@ export default class Recommend extends Component {
                 : 'carousel-recommend carousel-recommend-actived'
             }
             key={index}
+            onMouseEnter={this.handleMouseEnter}
+            onMouseLeave={this.handleMouseLeave}
           >
             <div className="carousel-recommend__avatar">
               <img src={avatar} alt="avatar" />
@@ -45,6 +71,7 @@ export default class Recommend extends Component {
                   ? 'recommend-slider__li recommend-slider__li_actived'
                   : 'recommend-slider__li'
               }
+              key={`slider-${index}`}
               data-index={index}
               onClick={this.handleIndexClick}
             ></div>

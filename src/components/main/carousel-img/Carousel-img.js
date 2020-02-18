@@ -5,17 +5,39 @@ export default class CarouselImg extends Component {
   state = {
     actived: 0,
   };
+  componentDidMount() {
+    const { imgsSrc } = this.props;
+    this.intervalId = setInterval(() => {
+      this.setState(currentState => {
+        return { actived: (currentState.actived + 1) % imgsSrc.length };
+      });
+    }, 5000);
+  }
+  componentWillUnmount() {
+    clearInterval(this.intervalId);
+  }
   handleIndexClick = event => {
     this.setState({
       actived: Number(event.target.dataset.index),
     });
+  };
+  handleMouseEnter = () => {
+    clearInterval(this.intervalId);
+  };
+  handleMouseLeave = () => {
+    const { imgsSrc } = this.props;
+    this.intervalId = setInterval(() => {
+      this.setState(currentState => {
+        return { actived: (currentState.actived + 1) % imgsSrc.length };
+      });
+    }, 5000);
   };
   render() {
     const { actived } = this.state;
     const { imgsSrc } = this.props;
     return (
       <div className="carousel-img">
-        <picture>
+        <picture onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
           <img src={imgsSrc[actived]} alt="banner" />
         </picture>
 
