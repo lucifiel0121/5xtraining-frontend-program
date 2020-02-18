@@ -23,11 +23,11 @@ header {
 .logo-link img {
   width: 100%;
   padding: 0 1rem;
+  cursor: pointer;
 }
 
 .navbar {
   display: flex;
-  color: #777;
   font-size: 1rem;
   line-height: 1.2;
   white-space: nowrap;
@@ -43,6 +43,7 @@ header {
   padding: 0.825rem;
   text-align: center;
   cursor: pointer;
+  color: #777;
   & > i {
     margin: 0 5px;
   }
@@ -51,6 +52,18 @@ header {
   }
   p {
     margin: 0;
+  }
+  &_selected {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: '';
+      bottom: 5px;
+      left: 5%;
+      height: 2px;
+      width: 90%;
+      border-bottom: 2px solid #b0a0ad;
+    }
   }
 }
 

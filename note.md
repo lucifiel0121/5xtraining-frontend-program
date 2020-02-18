@@ -1,36 +1,18 @@
 # note 
 
 
-## Day4 :
+## Week1 :
 - 遇到的困難：
-  - 嘗試只抽離 carousel 邏輯
-- 花費不少時間也不太理解， 先完成主要項目時間夠再考慮元件共用
-
-
-## Day3 :
-- 遇到的困難：
-  - 不習慣 data-index={index} 的運用
-  - loading 要塞 placeholder 或是調整生命週期
-- Header click status , 看不太理解官網原本做法，感覺自己 flex 沒摸熟
-- [ ] 動畫都還沒實作
-
-
-## Day2 :
-- 遇到的困難：
+  - 嘗試只抽離 carousel 邏輯 ： 花費不少時間也不太理解， 先完成主要項目時間夠再考慮元件共用
+  - Header click status , 看不太理解官網原本做法，感覺自己 flex 沒摸熟
+  - [ ] 動畫還沒實作
   - rem 單位的掌握不如 px 熟悉 
-  - 寫 CSS RWD 不太一致 , 排版的 padding 沒有統一（不如 mt-4 , mt-3 這種統一） 
+  - 寫 CSS RWD 不太一致 , 排版的 padding 沒有統一（不如 mt-4 , mt-3 這種 functional style 統一） 
+  - 在參考 5x 網站時發現 「(bootstrap 只可用 grid system、排版用的 class)」 的好處 ，類似於 functional CSS 但也不用那麼極端。 但不知道如果和 CSS in JS 的整合會如何，一個只抽離排版一個做樣式？
   - 沒辦法做到 100% 一樣 (排版, 字體顯示 rem/% )
-  - header transition 還需要另外寫動畫    
-- 先來做 RWD (header , footer)
-
-
-## Day1 :
-- 遇到的困難：
-  - 本來預期環境不會有問題，
-    把指令按照 步驟跑之後，發現之前 macOS 版本更新後很多設定有問題，
+  - [ ] header transition 還需要另外寫動畫    
+  - 本來預期環境不會有問題，把指令按照 步驟跑之後，發現之前 macOS 版本更新後很多設定有問題，
     花了不少時間。
-  - Sass 有點生疏，在參考 5x 網站時發現 「(bootstrap 只可用 grid system、排版用的 class)」 的好處 ，類似於 functional CSS 但也不用那麼極端。 但不知道如果和 CSS in JS 的整合會如何，一個只抽離排版一個做樣式？
-    有機會要補齊這一塊知識。
 
 
 瞭解 
