@@ -55,6 +55,7 @@
 }
 
 .know-about-us {
+  padding-top: 30px;
   h3 {
     font-size: 24px;
     color: #555;
@@ -78,6 +79,7 @@
 .social-btn {
   display: flex;
   justify-content: center;
+  padding-top: 20px;
   margin-bottom: 48px;
   img {
     cursor: pointer;
@@ -92,7 +94,15 @@
     flex-direction: column;
     &__item {
       width: calc(100% - 30px);
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
     }
+  }
+  .showcase-btn {
+    max-width: 540px;
+    padding-right: 30px;
+    width: calc(100% - 30px);
   }
 }
 

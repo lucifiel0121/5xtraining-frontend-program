@@ -7,6 +7,9 @@ import json from './static-data';
 import Showcase from './showcase/Showcase';
 import Recommend from './recommend/Recommend';
 export default class Main extends Component {
+  handleClick = () => {
+    window.scrollTo(0, 0);
+  };
   render() {
     const {
       bannerImgs,
@@ -24,7 +27,7 @@ export default class Main extends Component {
         <Recommend title="網頁課程推薦" recommands={recommands} />
         <Showcase title="案例作品 Showcase" showcaseInfo={showcaseInfo} socialIcon={socialIcon} />
 
-        <div className="scroll-to-top">
+        <div className="scroll-to-top" onClick={this.handleClick}>
           <i className="fa fa-angle-up"></i>
         </div>
       </div>
