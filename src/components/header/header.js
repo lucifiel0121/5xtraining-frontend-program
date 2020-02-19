@@ -3,21 +3,11 @@ import './header.scss';
 import { NavLink } from 'react-router-dom';
 
 export default class Header extends Component {
-  /*   constructor(props) {
-    super(props);
-    this.state = {
-      navToggle: false,
-    };
-  }
- */
   state = {
     navToggle: false,
   };
 
   handleNavClick = () => {
-    // Kent C. Dodds :
-    // if you need to reference current states than you can update a function
-    // if you don't than you can just use an object
     this.setState(currentState => {
       return { navToggle: !currentState.navToggle };
     });
@@ -26,7 +16,6 @@ export default class Header extends Component {
   render() {
     const { navToggle } = this.state;
     return (
-      /*  <header className="navbar-actived"> */
       <header className={navToggle ? 'navbar-actived' : ''}>
         <div className="logo-link">
           <NavLink to="/">

@@ -31,6 +31,11 @@ header {
   font-size: 1rem;
   line-height: 1.2;
   white-space: nowrap;
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .navbar__items {
