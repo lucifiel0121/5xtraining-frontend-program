@@ -31,7 +31,7 @@ export default class GoogleMap extends Component {
 
   render() {
     return (
-      <div id="google-map" ref={this.googleMapRef} style={{ width: '100%', height: '300px' }}></div>
+      <div id="google-map" ref={this.googleMapRef} style={{ width: '100%', height: '400px' }}></div>
     );
   }
 }

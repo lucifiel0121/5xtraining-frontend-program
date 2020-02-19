@@ -1,19 +1,25 @@
 import React, { Component } from 'react';
 import GooogleMap from './GoogleMap';
 import './contacts.scss';
+import ReactModal from 'react-modal';
 
 export default class Contacts extends Component {
   state = {
     name: '',
     email: '',
     phone: '',
-    need: '',
+    subject: '',
     message: '',
+    showModal: false,
+  };
+
+  handleOpenModal = () => {
+    this.setState({ showModal: true });
   };
 
   handleSubmit = event => {
     event.preventDefault();
-    console.log(this.state);
+    this.setState({ showModal: true });
   };
 
   handleChangeName = event => {
@@ -30,13 +36,17 @@ export default class Contacts extends Component {
   handleFormChange = event => {
     const target = event.target;
     const name = target.name;
-    console.log({ [name]: target.value });
     this.setState({
       [name]: target.value,
     });
   };
+
+  handleCloseModal = () => {
+    /*  this.setState({ showModal: false }); */
+    this.setState({ name: '', email: '', phone: '', subject: '', message: '', showModal: false });
+  };
   render() {
-    const { name, email, phone, message } = this.state;
+    const { name, email, phone, message, subject } = this.state;
     return (
       <div className="contacts-container">
         <div className="contacts-banner">
@@ -97,6 +107,7 @@ export default class Contacts extends Component {
                   placeholder="信箱"
                   value={email}
                   onChange={this.handleFormChange}
+                  required
                 />
               </div>
               <div className="form-group">
@@ -110,13 +121,8 @@ export default class Contacts extends Component {
                 />
               </div>
               <div className="form-group">
-                <select
-                  name="need"
-                  required
-                  value={this.state.need}
-                  onChange={this.handleFormChange}
-                >
-                  <option value>請選擇主題</option>
+                <select name="subject" required value={subject} onChange={this.handleFormChange}>
+                  <option value="">請選擇主題</option>
                   <option value="專案開發">專案開發</option>
                   <option value="技術諮詢">技術諮詢</option>
                   <option value="企業內訓">企業內訓</option>
@@ -145,6 +151,34 @@ export default class Contacts extends Component {
             </form>
           </div>
         </div>
+        <button onClick={this.handleOpenModal}>Trigger Modal</button>
+
+        <ReactModal
+          style={{
+            overlay: {
+              overflow: 'hidden',
+              zIndex: 5,
+              backgroundColor: 'rgba(0,0,0,0.7)',
+            },
+            content: {
+              width: '70%',
+              height: '50%',
+              margin: '0 auto',
+              top: '25%',
+              background: '#fff',
+            },
+          }}
+          isOpen={this.state.showModal}
+          contentLabel="Minimal Modal Example"
+        >
+          <div className="popup">
+            <div className="popup__content">
+              <span>送出的表單資料:</span>
+              <span> {JSON.stringify({ name, email, phone, subject, message })}</span>
+            </div>
+            <button onClick={this.handleCloseModal}>Close</button>
+          </div>
+        </ReactModal>
       </div>
     );
   }
