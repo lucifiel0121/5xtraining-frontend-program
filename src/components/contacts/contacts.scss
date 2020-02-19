@@ -98,7 +98,6 @@
   &__gmap {
     display: block;
     min-height: 200px;
-    background-color: #555;
   }
 }
 
@@ -148,4 +147,8 @@
     font-size: 1rem;
     border-radius: 0.625rem;
   }
+}
+
+#map {
+  height: 100%;
 }

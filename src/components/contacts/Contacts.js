@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+import GooogleMap from './GoogleMap';
 import './contacts.scss';
-import { Recaptcha } from 'react-recaptcha';
 
 export default class Contacts extends Component {
   state = {
@@ -10,7 +10,6 @@ export default class Contacts extends Component {
     need: '',
     message: '',
   };
-  // create a variable to store the component instance
 
   handleSubmit = event => {
     event.preventDefault();
@@ -71,7 +70,9 @@ export default class Contacts extends Component {
                 <p>統編：24536806</p>
               </div>
             </div>
-            <div className="contacts-detail__gmap"></div>
+            <div className="contacts-detail__gmap">
+              <GooogleMap />
+            </div>
           </div>
 
           <div className="contacts-form">
@@ -133,7 +134,13 @@ export default class Contacts extends Component {
                   onChange={this.handleFormChange}
                 />
               </div>
-              <Recaptcha ref={e => (recaptchaInstance = e)} sitekey="" />
+              <div className="form-group ">
+                <div
+                  className="g-recaptcha"
+                  data-sitekey="6Le9O9oUAAAAAEz7o-v7f1YjY49XP5y2_3gN3K6x"
+                ></div>
+              </div>
+
               <button>送出</button>
             </form>
           </div>
