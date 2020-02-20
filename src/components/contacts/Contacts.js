@@ -151,7 +151,6 @@ export default class Contacts extends Component {
             </form>
           </div>
         </div>
-        <button onClick={this.handleOpenModal}>Trigger Modal</button>
 
         <ReactModal
           style={{
@@ -173,10 +172,10 @@ export default class Contacts extends Component {
         >
           <div className="popup">
             <div className="popup__content">
-              <span>送出的表單資料:</span>
+              <span>您要送出的表單資料:</span>
               <span> {JSON.stringify({ name, email, phone, subject, message })}</span>
             </div>
-            <button onClick={this.handleCloseModal}>Close</button>
+            <button onClick={this.handleCloseModal}>確定</button>
           </div>
         </ReactModal>
       </div>

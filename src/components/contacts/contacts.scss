@@ -62,7 +62,7 @@
 .contacts-info {
   display: flex;
   flex-direction: row;
-  width: 90%;
+  width: 70%;
   margin: 0 auto 48px auto;
   padding: 48px 0;
   & > div {
@@ -81,7 +81,6 @@
   &__method {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     padding-right: 15px;
     margin-bottom: 16px;
     & > div {
@@ -172,5 +171,19 @@
     background-color: #d90845;
     font-size: 1rem;
     border-radius: 0.625rem;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 991px) and (min-width: 768px) {
+  .contacts-info {
+    width: 85%;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 768px) {
+  .contacts-info {
+    width: 90%;
   }
 }
