@@ -3,3 +3,245 @@
   position: relative;
   margin-top: 70px;
 }
+
+.posts-banner {
+  display: flex;
+  position: relative;
+  padding: 15px 0;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background: linear-gradient(135deg, rgba(197, 80, 10, 0.7) 0%, rgba(181, 4, 75, 0.7) 70%);
+  }
+  h1 {
+    font-size: 2.25rem;
+    font-weight: bold;
+    z-index: 1;
+    padding-bottom: 20px;
+    margin: 24px 0 16px 0;
+    position: relative;
+    &::after {
+      content: '';
+      margin: 0 0 0 -40px;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      height: 3px;
+      width: 80px;
+      border-bottom: 3px solid #fff;
+    }
+  }
+
+  &__title,
+  p {
+    z-index: 1;
+  }
+
+  p {
+    font-weight: bold;
+    margin: 0;
+    padding: 10px 0;
+  }
+}
+
+.fb-widget {
+  display: flex;
+  width: 75%;
+  justify-content: flex-end;
+  z-index: 1;
+
+  &__share,
+  &__like {
+    font-size: 14px;
+    line-height: 2;
+    margin-right: 4px;
+    padding: 0 8px;
+    color: #fff;
+    border-radius: 4px;
+    background-color: #1977f2;
+    cursor: pointer;
+  }
+
+  &__like {
+    width: 75px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+
+.posts-filter {
+  position: relative;
+  width: 100%;
+  padding: 25px 0 25px 5%;
+  background-color: #f7f7f7;
+  & select {
+    font-size: 19px;
+    margin-left: 5%;
+    position: relative;
+    color: #787878;
+    border: none;
+    appearance: none;
+  }
+
+  &::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 0.3em;
+    vertical-align: 0.255em;
+    content: '';
+    border-top: 0.4em solid #787878;
+    border-right: 0.4em solid transparent;
+    border-bottom: 0;
+    border-left: 0.4em solid transparent;
+  }
+}
+
+.posts-card {
+  display: flex;
+  height: 305px;
+  width: 90%;
+  padding: 0 15px;
+  margin: 25px auto 50px auto;
+
+  & > img {
+    width: 50%;
+  }
+  & > div {
+    width: 50%;
+  }
+  &__title {
+    margin: 15px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    a {
+      color: #333;
+      font-weight: 500;
+      font-size: 1.5rem;
+
+      &:hover {
+        color: #d90845;
+      }
+    }
+  }
+  &__description {
+    background-color: #f7f7f7;
+    padding: 24px;
+  }
+
+  &__time,
+  &__author {
+    color: #888;
+    font-size: 0.8rem;
+  }
+
+  &__content {
+    height: 45%;
+    margin: 16px 0;
+    overflow: hidden;
+  }
+  button {
+    display: inline-block;
+    color: #d90845;
+    padding: 7px 25px;
+    background-color: transparent;
+    border: 2px solid #d90845;
+    &:hover {
+      color: #fff;
+      background-color: #d90845;
+    }
+  }
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.pagination {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+  align-items: center;
+  justify-content: center;
+  &__item {
+    color: #d90845;
+    padding: 8px 12px;
+    cursor: pointer;
+
+    &:not(.pagination__item_actived):hover {
+      color: #fff;
+      background-color: #d90845;
+    }
+    &_actived {
+      color: #555;
+      font-weight: bold;
+      user-select: none;
+    }
+  }
+
+  &__prev,
+  &__next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #d90845;
+    padding: 8px 12px;
+    cursor: pointer;
+
+    &:not(.pagination__disabled):hover {
+      color: #fff;
+      background-color: #d90845;
+    }
+  }
+  &__prev {
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+  }
+  &__next {
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+  }
+  &__disabled {
+    user-select: none;
+    cursor: not-allowed;
+    color: #cccccc;
+    background-color: #fff;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 991px) and (min-width: 768px) {
+  .posts-card {
+    width: 95%;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 768px) {
+  .posts-card {
+    width: 80%;
+    height: 100%;
+    margin-bottom: 60px;
+    flex-direction: column;
+    & > div,
+    & > img {
+      width: 100%;
+    }
+  }
+}
