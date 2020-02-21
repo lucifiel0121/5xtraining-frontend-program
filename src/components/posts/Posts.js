@@ -26,7 +26,7 @@ class Posts extends Component {
   };
 
   componentDidMount() {
-    const url = 'https://jsonplaceholder.typicode.com/posts/dd';
+    const url = 'https://jsonplaceholder.typicode.com/posts/';
     fetch(url)
       .then(response => {
         /* if (!response.ok) {
