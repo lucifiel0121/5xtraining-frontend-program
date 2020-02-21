@@ -26,13 +26,18 @@ class Posts extends Component {
   };
 
   componentDidMount() {
-    const url = 'https://jsonplaceholder.typicode.com/posts/ddd';
+    const url = 'https://jsonplaceholder.typicode.com/posts/dd';
     fetch(url)
-      .then(response => response.json())
+      .then(response => {
+        /* if (!response.ok) {
+          throw new Error(response.status);
+        } */
+        return response.json();
+      })
       .then(data => {
         this.setState({ dataArray: data, loading: false });
       })
-      .catch();
+      .catch(error => console.log(error));
   }
 
   render() {
@@ -85,7 +90,6 @@ class Posts extends Component {
 export default function PostsWithErrorBoundary(props) {
   return (
     <ErrorBoundary>
-      {console.log({ ...props })}
       <Posts {...props} />
     </ErrorBoundary>
   );
