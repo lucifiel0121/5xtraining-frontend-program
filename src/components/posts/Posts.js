@@ -2,20 +2,21 @@ import React, { Component } from 'react';
 import PostsCard from './PostsCard';
 import Pagination from './Pagination';
 import './posts.scss';
-export default class Posts extends Component {
+import ErrorBoundary from './ErrorBoundary';
+class Posts extends Component {
   state = {
     loading: true,
-    dataSet: '',
+    dataArray: [],
     currentPage: 1,
     postsPerPage: 4,
   };
 
   paginate = pageNumber => {
-    const { dataSet, postsPerPage, currentPage } = this.state;
+    const { dataArray, postsPerPage, currentPage } = this.state;
 
     if (
       pageNumber === 0 ||
-      pageNumber === Math.ceil(dataSet.length / postsPerPage) + 1 ||
+      pageNumber === Math.ceil(dataArray.length / postsPerPage) + 1 ||
       currentPage === pageNumber
     ) {
       return;
@@ -23,28 +24,23 @@ export default class Posts extends Component {
     this.setState({ currentPage: pageNumber });
     window.scrollTo(0, 0);
   };
-  componentWillMount() {
-    const url = 'https://jsonplaceholder.typicode.com/posts';
+
+  componentDidMount() {
+    const url = 'https://jsonplaceholder.typicode.com/posts/ddd';
     fetch(url)
-      .then(response => {
-        return response.json();
-      })
+      .then(response => response.json())
       .then(data => {
-        let { dataSet } = this.state;
-        dataSet = data;
-        this.setState({ dataSet, loading: false });
-        console.log(this.state);
-      });
+        this.setState({ dataArray: data, loading: false });
+      })
+      .catch();
   }
 
   render() {
-    const { dataSet, loading, currentPage, postsPerPage } = this.state;
+    const { dataArray, loading, currentPage, postsPerPage } = this.state;
     const indexOfLastPost = currentPage * postsPerPage;
 
     const indexOfFirstPost = indexOfLastPost - postsPerPage;
-    const currentPosts = dataSet.slice(indexOfFirstPost, indexOfLastPost);
-
-    console.log('slices', currentPosts);
+    const currentPosts = dataArray.slice(indexOfFirstPost, indexOfLastPost);
 
     return (
       <div className="posts-container">
@@ -77,11 +73,20 @@ export default class Posts extends Component {
         <PostsCard data={currentPosts} loading={loading} />
         <Pagination
           postsPerPage={postsPerPage}
-          totalPosts={dataSet.length}
+          totalPosts={dataArray.length}
           paginate={this.paginate}
           currentPage={currentPage}
         />
       </div>
     );
   }
+}
+
+export default function PostsWithErrorBoundary(props) {
+  return (
+    <ErrorBoundary>
+      {console.log({ ...props })}
+      <Posts {...props} />
+    </ErrorBoundary>
+  );
 }

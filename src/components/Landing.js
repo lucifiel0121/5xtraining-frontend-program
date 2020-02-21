@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import Main from './main/Main';
 import Contacts from './contacts/Contacts';
-import Posts from './posts/Posts';
+import PostsWithErrorBoundary from './posts/Posts';
 export default class Landing extends Component {
   render() {
     return (
@@ -26,7 +26,7 @@ export default class Landing extends Component {
           <Space />
         </Route>
         <Route path="/posts">
-          <Posts />
+          <PostsWithErrorBoundary />
         </Route>
         <Route path="/contacts">
           <Contacts />
