@@ -29,13 +29,13 @@ export default class Header extends Component {
             <div className="navbar">
                <NavLink to="/class" activeClassName="navbar__items_selected">
                   <li className="navbar__items">
-                     <i className="far fa-gem"></i>
+                     <i className="far fa-gem" />
                      <p>線上課程</p>
                   </li>
                </NavLink>
                <NavLink to="/camp" activeClassName="navbar__items_selected">
                   <li className="navbar__items navbar__items_fake-tag">
-                     <i className="far fa-compass fa-lg"></i>
+                     <i className="far fa-compass fa-lg" />
                      <p>ASTRO Camp</p>
                   </li>
                </NavLink>
@@ -67,10 +67,14 @@ export default class Header extends Component {
                   </li>
                </NavLink>
             </div>
-            <button className="nav-toggler" onClick={this.handleNavClick}>
-               <i className="icon-bar"></i>
-               <i className="icon-bar"></i>
-               <i className="icon-bar"></i>
+            <button
+               type="button"
+               className="nav-toggler"
+               onClick={this.handleNavClick}
+            >
+               <i className="icon-bar" />
+               <i className="icon-bar" />
+               <i className="icon-bar" />
             </button>
          </header>
       )

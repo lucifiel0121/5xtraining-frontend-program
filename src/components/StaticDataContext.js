@@ -1,6 +1,6 @@
-import { createContext } from 'react';
-import json from './main/static-data';
+import { createContext } from 'react'
+import json from './main/static-data'
 
-const StaticDataContext = createContext([json, () => {}]);
+const StaticDataContext = createContext([json, () => {}])
 
-export default StaticDataContext;
+export default StaticDataContext
