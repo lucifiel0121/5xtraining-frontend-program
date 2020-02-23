@@ -48,7 +48,7 @@ Check commit message for more info.
   - 各個欄位必須加上 html5 validate
   - 使用 [React Modal](https://github.com/reactjs/react-modal) 將送出的表單資料顯示在 Popup Modal 上面(樣式只要求有 popup modal 效果)
 
-- [ ] 步驟 7: 改用 [webpack](https://webpack.js.org/) 替代 `create-react-app`
+- [x] 步驟 7: 改用 [webpack](https://webpack.js.org/) 替代 `create-react-app`
 
   - 設定 loader, 讓專案能讀取 css、js、font、image 等...檔案
   - 設定 babel, 能編譯 react jsx + es6 語法
