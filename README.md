@@ -1,5 +1,7 @@
 # 5xtraining-frontend-program
 
+[![Build Status](https://travis-ci.com/lucifiel0121/5xtraining-frontend-program.svg?branch=master)](https://travis-ci.com/lucifiel0121/5xtraining-frontend-program)
+
 This repo is for Pre-test on 5x.
 Check commit message for more info.
 
