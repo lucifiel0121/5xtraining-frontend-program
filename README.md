@@ -93,6 +93,7 @@ Check commit message for more info.
 
 - [ ] [react render props](https://reactjs.org/docs/render-props.html): 可替代 HOC 的另一種程式碼共用手法。
 - [ ] react: 用 create-react-app 建立一個新的專案，並研究用 [npm run eject](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#npm-run-eject) 產生出來的 webpack 設定檔與步驟七手刻的版本有哪些差異？
+  - eject 出來的很多設定都先寫在 package.json
 - [ ] react application test： https://jestjs.io/docs/en/tutorial-react
 - [ ] redux (container、action、reducer)
 - [ ] react: credit card form (信用卡表單)
